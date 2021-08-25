@@ -2,26 +2,26 @@ Sending build context to Docker daemon   2.56kB
 Step 1/17 : FROM ubuntu:20.04
  ---> 1318b700e415
 Step 2/17 : RUN ["/bin/bash","-c","apt-get -y update && apt-get -y install locales"]
- ---> Running in bf5f3247cce6
+ ---> Running in f776dcd2ae5e
 Get:1 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
 Get:2 http://archive.ubuntu.com/ubuntu focal InRelease [265 kB]
-Get:3 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [1034 kB]
-Get:4 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
-Get:5 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [792 kB]
-Get:6 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [488 kB]
-Get:7 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [30.6 kB]
+Get:3 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [30.6 kB]
+Get:4 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [792 kB]
+Get:5 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [488 kB]
+Get:6 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [1034 kB]
+Get:7 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
 Get:8 http://archive.ubuntu.com/ubuntu focal-backports InRelease [101 kB]
-Get:9 http://archive.ubuntu.com/ubuntu focal/multiverse amd64 Packages [177 kB]
+Get:9 http://archive.ubuntu.com/ubuntu focal/universe amd64 Packages [11.3 MB]
 Get:10 http://archive.ubuntu.com/ubuntu focal/main amd64 Packages [1275 kB]
-Get:11 http://archive.ubuntu.com/ubuntu focal/universe amd64 Packages [11.3 MB]
+Get:11 http://archive.ubuntu.com/ubuntu focal/multiverse amd64 Packages [177 kB]
 Get:12 http://archive.ubuntu.com/ubuntu focal/restricted amd64 Packages [33.4 kB]
 Get:13 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [1064 kB]
-Get:14 http://archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [534 kB]
+Get:14 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [33.8 kB]
 Get:15 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [1471 kB]
-Get:16 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [33.8 kB]
+Get:16 http://archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [534 kB]
 Get:17 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [6324 B]
 Get:18 http://archive.ubuntu.com/ubuntu focal-backports/main amd64 Packages [2668 B]
-Fetched 18.9 MB in 3s (6973 kB/s)
+Fetched 18.9 MB in 3s (6430 kB/s)
 Reading package lists...
 Reading package lists...
 Building dependency tree...
@@ -33,7 +33,7 @@ Need to get 3872 kB of archives.
 After this operation, 17.6 MB of additional disk space will be used.
 Get:1 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 locales all 2.31-0ubuntu9.2 [3872 kB]
 [91mdebconf: delaying package configuration, since apt-utils is not installed
-[0mFetched 3872 kB in 2s (1608 kB/s)
+[0mFetched 3872 kB in 1s (3331 kB/s)
 Selecting previously unselected package locales.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4127 files and directories currently installed.)
 Preparing to unpack .../locales_2.31-0ubuntu9.2_all.deb ...
@@ -47,29 +47,29 @@ debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Ter
 debconf: falling back to frontend: Teletype
 Generating locales (this might take a while)...
 Generation complete.
-Removing intermediate container bf5f3247cce6
- ---> 87f2d892729b
+Removing intermediate container f776dcd2ae5e
+ ---> b29d67322612
 Step 3/17 : RUN ["/bin/bash","-c","locale-gen en_US.UTF-8"]
- ---> Running in 263096d05469
+ ---> Running in c94950f5f8c6
 Generating locales (this might take a while)...
   en_US.UTF-8... done
 Generation complete.
-Removing intermediate container 263096d05469
- ---> da1352234a3b
+Removing intermediate container c94950f5f8c6
+ ---> e380e0a4a4f4
 Step 4/17 : ENV LANG=en_US.UTF-8
- ---> Running in 19da3b5bdba1
-Removing intermediate container 19da3b5bdba1
- ---> 7d8dc3c30952
+ ---> Running in 8d40b780b449
+Removing intermediate container 8d40b780b449
+ ---> 9e05b25958af
 Step 5/17 : ENV LANGUAGE=en_US:en
- ---> Running in 549449f1899f
-Removing intermediate container 549449f1899f
- ---> 114eadc19540
+ ---> Running in 7faab4636b31
+Removing intermediate container 7faab4636b31
+ ---> b10b5eddd27f
 Step 6/17 : ENV LC_ALL=en_US.UTF-8
- ---> Running in b4a68ab8faef
-Removing intermediate container b4a68ab8faef
- ---> 5ba0525c6d0a
+ ---> Running in f45aa95fb332
+Removing intermediate container f45aa95fb332
+ ---> fb2bad1ab180
 Step 7/17 : RUN ["/bin/bash","-c","apt-get -y update && apt-get -y install sudo"]
- ---> Running in 6b2a856a31dc
+ ---> Running in 92c2b4d88cd9
 Hit:1 http://security.ubuntu.com/ubuntu focal-security InRelease
 Hit:2 http://archive.ubuntu.com/ubuntu focal InRelease
 Hit:3 http://archive.ubuntu.com/ubuntu focal-updates InRelease
@@ -85,20 +85,20 @@ Need to get 514 kB of archives.
 After this operation, 2,257 kB of additional disk space will be used.
 Get:1 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 sudo amd64 1.8.31-1ubuntu1.2 [514 kB]
 [91mdebconf: delaying package configuration, since apt-utils is not installed
-[0mFetched 514 kB in 1s (627 kB/s)
+[0mFetched 514 kB in 1s (455 kB/s)
 Selecting previously unselected package sudo.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4746 files and directories currently installed.)
 Preparing to unpack .../sudo_1.8.31-1ubuntu1.2_amd64.deb ...
 Unpacking sudo (1.8.31-1ubuntu1.2) ...
 Setting up sudo (1.8.31-1ubuntu1.2) ...
-Removing intermediate container 6b2a856a31dc
- ---> e17a9e22788b
+Removing intermediate container 92c2b4d88cd9
+ ---> ae36e7430f56
 Step 8/17 : RUN ["/bin/bash","-c","echo 'ALL            ALL = (ALL) NOPASSWD: ALL' >> /etc/sudoers"]
- ---> Running in b5ee8ea43864
-Removing intermediate container b5ee8ea43864
- ---> 328f2dd958e3
+ ---> Running in 9ec0471562ab
+Removing intermediate container 9ec0471562ab
+ ---> dd443ffbea1b
 Step 9/17 : RUN ["/bin/bash","-c","apt-get -y update && apt-get -y install debconf"]
- ---> Running in 4cbebb2331cb
+ ---> Running in 9cdcd25b9fcc
 Hit:1 http://security.ubuntu.com/ubuntu focal-security InRelease
 Hit:2 http://archive.ubuntu.com/ubuntu focal InRelease
 Hit:3 http://archive.ubuntu.com/ubuntu focal-updates InRelease
@@ -109,34 +109,34 @@ Building dependency tree...
 Reading state information...
 debconf is already the newest version (1.5.73).
 0 upgraded, 0 newly installed, 0 to remove and 4 not upgraded.
-Removing intermediate container 4cbebb2331cb
- ---> c67912e1a906
+Removing intermediate container 9cdcd25b9fcc
+ ---> 59ef044e70c6
 Step 10/17 : RUN ["/bin/bash","-c","echo 'debconf debconf/frontend select Noninteractive' | sudo debconf-set-selections"]
- ---> Running in 0d1b68892d01
-Removing intermediate container 0d1b68892d01
- ---> 014912f59c56
+ ---> Running in 642ece94c004
+Removing intermediate container 642ece94c004
+ ---> de5e31ced722
 Step 11/17 : RUN ["groupadd","--gid","121","docker"]
- ---> Running in 8fc164fdb80e
-Removing intermediate container 8fc164fdb80e
- ---> 098405a335a5
+ ---> Running in 07c733aba185
+Removing intermediate container 07c733aba185
+ ---> 365117277c72
 Step 12/17 : RUN ["useradd","--gid","121","--uid","1001","--home","/home/runner","runner"]
- ---> Running in 9d39fa788c48
-Removing intermediate container 9d39fa788c48
- ---> 58defbaf7db8
+ ---> Running in 2b8d6f2d1166
+Removing intermediate container 2b8d6f2d1166
+ ---> 7e06d45f873a
 Step 13/17 : RUN ["mkdir","-p","/home/runner"]
- ---> Running in 3e4bc7ab2089
-Removing intermediate container 3e4bc7ab2089
- ---> 50fcc35da952
+ ---> Running in 16ab46eed434
+Removing intermediate container 16ab46eed434
+ ---> 02c27469cbcc
 Step 14/17 : RUN ["chown","-R","1001:121","/home/runner"]
- ---> Running in 91f110c4d7ed
-Removing intermediate container 91f110c4d7ed
- ---> 68a511d39187
+ ---> Running in 95aa2b551249
+Removing intermediate container 95aa2b551249
+ ---> c410e22228cf
 Step 15/17 : USER runner
- ---> Running in ca94c7ebea4a
-Removing intermediate container ca94c7ebea4a
- ---> 80b453afd4ef
-Step 16/17 : RUN ["/bin/bash","-c","sudo apt-get -y update && sudo apt-get -y install m4"]
- ---> Running in 797457205e03
+ ---> Running in 4a3948f0142d
+Removing intermediate container 4a3948f0142d
+ ---> 9dd0e03a3a0e
+Step 16/17 : RUN ["/bin/bash","-c","sudo apt-get -y update && sudo apt-get -y install bash m4"]
+ ---> Running in a187ef420715
 Hit:1 http://security.ubuntu.com/ubuntu focal-security InRelease
 Hit:2 http://archive.ubuntu.com/ubuntu focal InRelease
 Hit:3 http://archive.ubuntu.com/ubuntu focal-updates InRelease
@@ -145,8 +145,7 @@ Reading package lists...
 Reading package lists...
 Building dependency tree...
 Reading state information...
-The following additional packages will be installed:
-  libsigsegv2
+bash is already the newest version (5.0-6ubuntu1.1).
 Suggested packages:
   m4-doc
 The following NEW packages will be installed:
@@ -157,7 +156,7 @@ After this operation, 402 kB of additional disk space will be used.
 Get:1 http://archive.ubuntu.com/ubuntu focal/main amd64 libsigsegv2 amd64 2.12-2 [13.9 kB]
 Get:2 http://archive.ubuntu.com/ubuntu focal/main amd64 m4 amd64 1.4.18-4 [199 kB]
 [91mdebconf: delaying package configuration, since apt-utils is not installed
-[0mFetched 213 kB in 1s (275 kB/s)
+[0mFetched 213 kB in 1s (301 kB/s)
 Selecting previously unselected package libsigsegv2:amd64.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4804 files and directories currently installed.)
 Preparing to unpack .../libsigsegv2_2.12-2_amd64.deb ...
@@ -168,14 +167,14 @@ Unpacking m4 (1.4.18-4) ...
 Setting up libsigsegv2:amd64 (2.12-2) ...
 Setting up m4 (1.4.18-4) ...
 Processing triggers for libc-bin (2.31-0ubuntu9.2) ...
-Removing intermediate container 797457205e03
- ---> 8154b9e94c13
+Removing intermediate container a187ef420715
+ ---> 41571408edd5
 Step 17/17 : RUN ["/bin/bash","-c","\n"]
- ---> Running in 1f9b8d953cdc
-Removing intermediate container 1f9b8d953cdc
- ---> dbe411b3422c
-Successfully built dbe411b3422c
-Successfully tagged mini-cross-12fadbeea6821085f606180d2219cc6521cb133d08571a90cecd59fff5c8d05b:latest
+ ---> Running in e8c663847eaf
+Removing intermediate container e8c663847eaf
+ ---> f531de3f0439
+Successfully built f531de3f0439
+Successfully tagged mini-cross-c20f18f7e7f6aa16f88b1ca07cec54e200b360babf4f3856304293979be36891:latest
 <!doctype html>
 <html class="no-js" lang="">
 
@@ -198,7 +197,7 @@ Successfully tagged mini-cross-12fadbeea6821085f606180d2219cc6521cb133d08571a90c
   <!-- Add your site or application content here -->
   <h1>GitHub Pages deployed by GitHub Actions</h1>
   <p>Built on
-  2021-08-25 15:59:55+00:00
+  2021-08-25 16:06:08+00:00
 
   </p>
 </body>
